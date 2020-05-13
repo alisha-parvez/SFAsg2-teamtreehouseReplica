@@ -1,0 +1,564 @@
+@charset "UTF-8";
+
+
+body{
+  margin:0;
+  box-sizing: border-box;
+  box-sizing: inherit;
+}
+
+
+footer{
+  display: none;
+  position:absolute;
+  left:50%;
+}
+
+
+#layout{
+  align-items:center;
+}
+
+/*Styles for the navigation bar*/
+
+      ul{
+        list-style-type: none;
+        display: inline;
+      }
+
+      #siteNav
+      {
+        display:flex;
+        font-family: "Gotham Rounded A", "Gotham Rounded B",'Nunito', Helvetica, Arial, sans-serif;
+        @font-face {font-family: "Gotham Rounded"; src: url("//db.onlinewebfonts.com/t/dffb2b80813d195d26fa4d2aad48b059.eot"); src: url("//db.onlinewebfonts.com/t/dffb2b80813d195d26fa4d2aad48b059.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/dffb2b80813d195d26fa4d2aad48b059.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/dffb2b80813d195d26fa4d2aad48b059.woff") format("woff"), url("//db.onlinewebfonts.com/t/dffb2b80813d195d26fa4d2aad48b059.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/dffb2b80813d195d26fa4d2aad48b059.svg#Gotham Rounded") format("svg"); }
+        float:right;
+        padding-right: 2em;
+      }
+
+      li{
+        padding:0.25em 1em;
+        font-size:1em;
+      }
+
+      .normalNav a:visited,a:link{
+        color:grey;
+      }
+
+      .normalNav a:hover{
+        color:black;
+      }
+
+      #nav img{
+        position: fixed;
+        padding: 0.75em 2em;
+      }
+
+      #nav img:hover{
+        filter:brightness(85%);
+      }
+
+
+      #freeNav a:visited,a:link
+      {
+        color:rgb(100, 191,82);
+      }
+
+      #freeNav a:hover{
+        color:green;
+      }
+
+
+      #nav
+      {
+        background-color:white;
+        height: 4em;
+        width: 100%;
+        background-size: cover;
+        position:fixed;
+        list-style-type:none;
+        z-index:1000;
+      }
+
+      a{
+        text-decoration:none;
+      }
+
+/*Styles for the navigation bar ends*/
+
+
+
+/*styles for the first background area containing form,tagline and stats*/
+
+    #formSpace{
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-image:linear-gradient(180deg, rgba(6, 27, 61, 0), rgba(6, 27, 61, 1) 60%),url(background_form.jpg);
+      height:40em;
+      background-size:cover;
+      background-position: center;
+      display: grid;
+      grid-template-rows: 10fr 1fr;
+      grid-template-columns:1fr 1fr;
+      /*margin: 0 auto;
+      margin:auto;
+      width:min-content;
+      max-width:100%;*/
+    }
+
+    #stats
+    {
+      text-align:center;
+      font-size: 1.5em;
+      color:white;
+      font-family:sans-serif;
+      disply: flex;
+      flex-direction: row;
+      grid-row-start:2;
+      grid-row-end: 3;
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+
+    #stats p{
+      display:inline;
+      padding: 0.25em;
+      font-family: "Gotham Rounded A", "Gotham Rounded B",'Nunito', Helvetica, Arial, sans-serif;
+      @font-face {font-family: "Gotham Rounded"; src: url("//db.onlinewebfonts.com/t/dffb2b80813d195d26fa4d2aad48b059.eot"); src: url("//db.onlinewebfonts.com/t/dffb2b80813d195d26fa4d2aad48b059.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/dffb2b80813d195d26fa4d2aad48b059.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/dffb2b80813d195d26fa4d2aad48b059.woff") format("woff"), url("//db.onlinewebfonts.com/t/dffb2b80813d195d26fa4d2aad48b059.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/dffb2b80813d195d26fa4d2aad48b059.svg#Gotham Rounded") format("svg"); }
+
+    }
+
+    .num
+    {
+      font-size: 1.5em;
+      padding:0;
+    }
+
+
+    #formSpace h1,h2
+    {
+      color:white;
+      font-family: "Gotham Rounded A", "Gotham Rounded B",'Nunito', Helvetica, Arial, sans-serif;
+      @font-face {font-family: "Gotham Rounded"; src: url("//db.onlinewebfonts.com/t/dffb2b80813d195d26fa4d2aad48b059.eot"); src: url("//db.onlinewebfonts.com/t/dffb2b80813d195d26fa4d2aad48b059.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/dffb2b80813d195d26fa4d2aad48b059.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/dffb2b80813d195d26fa4d2aad48b059.woff") format("woff"), url("//db.onlinewebfonts.com/t/dffb2b80813d195d26fa4d2aad48b059.ttf")
+      format("truetype"), url("//db.onlinewebfonts.com/t/dffb2b80813d195d26fa4d2aad48b059.svg#Gotham Rounded") format("svg"); }
+
+    }
+
+    h1
+    {
+      font-weight: bold;
+      font-size:2.6em;
+    }
+
+    h2{
+      font-weight: lighter;
+      font-size:1.8em;
+    }
+
+    #tagline
+    {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 1;
+      grid-row-end: 2;
+      text-align: center;
+      padding-left:1em;
+      position: relative;
+      top: 15em;
+    }
+
+    #form
+    {
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row-start: 1;
+      grid-row-end: 2;
+      /*text-align: center;*/
+      padding-left:0;
+      margin-top: 4em;
+      margin-left:2em;
+      /*height:27em;*/
+      background-color: white;
+      margin-top: 6em;
+      font-family: "Gotham Rounded A", "Gotham Rounded B",'Nunito', Helvetica, Arial, sans-serif;
+      @font-face {font-family: "Gotham Rounded"; src: url("//db.onlinewebfonts.com/t/dffb2b80813d195d26fa4d2aad48b059.eot"); src: url("//db.onlinewebfonts.com/t/dffb2b80813d195d26fa4d2aad48b059.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/dffb2b80813d195d26fa4d2aad48b059.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/dffb2b80813d195d26fa4d2aad48b059.woff") format("woff"), url("//db.onlinewebfonts.com/t/dffb2b80813d195d26fa4d2aad48b059.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/dffb2b80813d195d26fa4d2aad48b059.svg#Gotham Rounded") format("svg"); }
+      line-height:1.5em;
+      border-radius:1em;
+      width:auto;
+      max-width: 32em;
+    }
+
+
+    .txtbox{
+      min-width:15em;
+    }
+
+    #form a:hover{
+      background-color: rgb(10, 70, 102);
+    }
+
+    #freetrial
+    {
+      text-align: center;
+      color:rgb(82,81,81);
+      background-color: rgb(228, 231, 235);
+      height:3em;
+      padding-top:2em;
+      border-top-left-radius:1em;
+      border-top-right-radius:1em;
+    }
+
+    #details{
+      padding:0.5em 1em;
+      text-align:left;
+    }
+
+    #row1,#row2{
+      display:flex;
+    }
+
+
+
+.labelText{
+  padding: 0.5em 1em;
+}
+
+.detailLabel5
+{
+  display: inline;
+  padding-left: 2em;
+  font-size: 0.75em;
+  padding-top: 1em;
+}
+.chkbox{
+    height: 0.5em;
+    width: 0.5em;
+    border-radius:0.4em;
+    border: 1px solid grey;
+  }
+
+  .txtbox{
+      width:47%;
+      height:3em;
+      border-radius:0.4em;
+      border: 2px solid;
+      border-color: rgb(190, 190, 190);
+      background-color: rgb(245, 245, 245);
+    }
+
+    b{
+      font-weight:1000;
+      color:black;
+    }
+
+    input:hover{
+      border-color:grey;
+    }
+
+    #ButtonBlue{
+      background-color: rgb(35, 117, 161);
+      color:white;
+      padding: 1em 7em;
+      font-size:1em;
+      border-radius: 0.5em;
+      text-align: center;
+      position:relative;
+      top:4em;
+      left:4em;
+    }
+
+
+/*styles for the first background area ends*/
+
+/*styles for main page area starts*/
+    #main
+    {
+      margin: 0 auto;
+      background-image: url(background_main.png);
+      background-repeat: no-repeat;
+      height: 80em;
+      background-size: cover;
+      display:grid;
+      text-align: left;
+      grid-template-rows:1fr 1fr;
+      grid-template-columns:1fr 1fr;
+      max-width: min-content;
+      margin:auto;
+
+    }
+
+    /*Styles for Flexible*/
+
+      #Flexible{
+        grid-row-start:1;
+        grid-row-end:2;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        font-family: "Gotham Rounded A", "Gotham Rounded B",'Nunito', Helvetica, Arial, sans-serif;
+        @font-face {font-family: "Gotham Rounded"; src: url("//db.onlinewebfonts.com/t/dffb2b80813d195d26fa4d2aad48b059.eot"); src: url("//db.onlinewebfonts.com/t/dffb2b80813d195d26fa4d2aad48b059.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/dffb2b80813d195d26fa4d2aad48b059.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/dffb2b80813d195d26fa4d2aad48b059.woff") format("woff"), url("//db.onlinewebfonts.com/t/dffb2b80813d195d26fa4d2aad48b059.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/dffb2b80813d195d26fa4d2aad48b059.svg#Gotham Rounded") format("svg"); }
+        line-height:1.5em;
+        display:grid;
+        grid-template-columns: 1.5fr 1fr;
+        border-bottom: 2px silver solid;
+      }
+
+      #Flexible h1{
+        font-size: 2em;
+      }
+
+      #Flexible p{
+        color: grey;
+        font-size:1.1em;
+      }
+
+      video{
+        display:inline;
+        padding-top:5em;
+        grid-column-start:1;
+        grid-column-end:2;
+        padding-left: 5em;
+        padding-right: 2.5em;
+      }
+
+      #contentFlexible
+      {
+        padding-top:5em;
+        grid-column-start:2;
+        grid-column-end:3;
+      }
+
+
+
+
+    /*Styles for Flexible ends*/
+
+    /*Styles for Supportive*/
+
+      #Supportive{
+        grid-row-start:2;
+        grid-row-end:3;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        text-align:left;
+        font-family: "Gotham Rounded A", "Gotham Rounded B",'Nunito', Helvetica, Arial, sans-serif;
+        @font-face {font-family: "Gotham Rounded"; src: url("//db.onlinewebfonts.com/t/dffb2b80813d195d26fa4d2aad48b059.eot"); src: url("//db.onlinewebfonts.com/t/dffb2b80813d195d26fa4d2aad48b059.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/dffb2b80813d195d26fa4d2aad48b059.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/dffb2b80813d195d26fa4d2aad48b059.woff") format("woff"), url("//db.onlinewebfonts.com/t/dffb2b80813d195d26fa4d2aad48b059.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/dffb2b80813d195d26fa4d2aad48b059.svg#Gotham Rounded") format("svg"); }
+        line-height:1.5em;
+        padding: 2em 3em;
+      }
+
+      #Supportive img{
+        width: 20em;
+        padding:1em 8em;
+
+      }
+
+      #Supportive h1{
+        font-size: 2em;
+      }
+
+      #Supportive p{
+        color: grey;
+        font-size:1.1em;
+
+      }
+      /*Styles for Supportive ends*/
+
+      /*Styles for valuable*/
+
+        #Valuable{
+          grid-row-start:2;
+          grid-row-end:3;
+          grid-column-start: 2;
+          grid-column-end: 3;
+          text-align:left;
+          font-family: "Gotham Rounded A", "Gotham Rounded B","",'Nunito', Helvetica, Arial, sans-serif;
+          @font-face {font-family: "Gotham Rounded"; src: url("//db.onlinewebfonts.com/t/dffb2b80813d195d26fa4d2aad48b059.eot"); src: url("//db.onlinewebfonts.com/t/dffb2b80813d195d26fa4d2aad48b059.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/dffb2b80813d195d26fa4d2aad48b059.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/dffb2b80813d195d26fa4d2aad48b059.woff") format("woff"), url("//db.onlinewebfonts.com/t/dffb2b80813d195d26fa4d2aad48b059.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/dffb2b80813d195d26fa4d2aad48b059.svg#Gotham Rounded") format("svg"); }
+          line-height:1.5em;
+          padding-right: 2em;
+          padding-top:2em;
+        }
+
+        #Valuable h1{
+          font-size: 2em;
+        }
+
+        #Valuable p{
+          color: grey;
+          font-size:1.1em;
+        }
+
+        #Valuable img{
+          width: 25em;
+          padding-top:3em;
+          padding-left: 3em;
+
+        }
+
+      /*Styles for valuable ends*/
+
+
+      #girl{
+        position:relative;
+        bottom:1em;
+        right:5em;
+      }
+
+/*styles for main page area ends*/
+
+/*styles for code challenge area starts*/
+
+    #Code_Challenge
+    {
+      background-image: url(background_challenge.jpg);
+      background-repeat: no-repeat;
+      height:33em;
+      background-size:cover;
+      text-align:center;
+      font-family: "Gotham Rounded A", "Gotham Rounded B",'Nunito', Helvetica, Arial, sans-serif;
+      @font-face {font-family: "Gotham Rounded"; src: url("//db.onlinewebfonts.com/t/dffb2b80813d195d26fa4d2aad48b059.eot"); src: url("//db.onlinewebfonts.com/t/dffb2b80813d195d26fa4d2aad48b059.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/dffb2b80813d195d26fa4d2aad48b059.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/dffb2b80813d195d26fa4d2aad48b059.woff") format("woff"), url("//db.onlinewebfonts.com/t/dffb2b80813d195d26fa4d2aad48b059.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/dffb2b80813d195d26fa4d2aad48b059.svg#Gotham Rounded") format("svg"); }
+
+
+      color:white;
+
+    }
+
+    #Code_Challenge p{
+      font-size: 1.25em;
+      padding-top:0;
+    }
+
+    #Code_Challenge h1{
+      font-family: "Gotham Rounded A", "Gotham Rounded B",'Nunito', Helvetica, Arial, sans-serif;
+      @font-face {font-family: "Gotham Rounded"; src: url("//db.onlinewebfonts.com/t/dffb2b80813d195d26fa4d2aad48b059.eot"); src: url("//db.onlinewebfonts.com/t/dffb2b80813d195d26fa4d2aad48b059.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/dffb2b80813d195d26fa4d2aad48b059.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/dffb2b80813d195d26fa4d2aad48b059.woff") format("woff"), url("//db.onlinewebfonts.com/t/dffb2b80813d195d26fa4d2aad48b059.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/dffb2b80813d195d26fa4d2aad48b059.svg#Gotham Rounded") format("svg"); }
+      color:white;
+      font-size: 2.5em;
+      padding-top:2em;
+      padding-bottom:0;
+    }
+
+    #Button{
+      background-color: rgb(92, 224, 149);
+      color:white;
+      padding: 1em 3em;
+      font-size:1em;
+      border-radius: 0.5em;
+      text-align: center;
+      margin-top:5em;
+    }
+
+    #Code_Challenge a:hover{
+      background-color: rgb(100, 191,82);
+    }
+
+
+
+/*styles for code challenge area ends*/
+
+
+/*Styles for partnerships*/
+
+#Partnership{
+  text-align: center;
+  padding-top:5em;
+  padding-bottom: 5em;
+
+}
+
+#Partnership h1{
+  font-family: "Gotham Rounded A", "Gotham Rounded B",'Nunito', Helvetica, Arial, sans-serif;
+  @font-face {font-family: "Gotham Rounded"; src: url("//db.onlinewebfonts.com/t/dffb2b80813d195d26fa4d2aad48b059.eot"); src: url("//db.onlinewebfonts.com/t/dffb2b80813d195d26fa4d2aad48b059.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/dffb2b80813d195d26fa4d2aad48b059.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/dffb2b80813d195d26fa4d2aad48b059.woff") format("woff"), url("//db.onlinewebfonts.com/t/dffb2b80813d195d26fa4d2aad48b059.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/dffb2b80813d195d26fa4d2aad48b059.svg#Gotham Rounded") format("svg"); }
+  color:rgb(71, 71, 71);
+}
+
+#Partnership img{
+  width:18em;
+}
+
+#google{
+  position:relative;
+  bottom: 1.8em;
+}
+
+#ibm{
+  position:relative;;
+  top:0.5em;
+}
+
+
+/*Styles for partnerships ends*/
+
+
+
+/*styles for footer starts*/
+
+#footer{
+  height:10em;
+  padding:5em 3em 0 3em;
+  font-family: "Gotham Rounded A", "Gotham Rounded B",'Nunito', Helvetica, Arial, sans-serif;
+  @font-face {font-family: "Gotham Rounded"; src: url("//db.onlinewebfonts.com/t/dffb2b80813d195d26fa4d2aad48b059.eot"); src: url("//db.onlinewebfonts.com/t/dffb2b80813d195d26fa4d2aad48b059.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/dffb2b80813d195d26fa4d2aad48b059.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/dffb2b80813d195d26fa4d2aad48b059.woff") format("woff"), url("//db.onlinewebfonts.com/t/dffb2b80813d195d26fa4d2aad48b059.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/dffb2b80813d195d26fa4d2aad48b059.svg#Gotham Rounded") format("svg"); }
+  color:rgb(138, 136, 136);
+  margin:0 auto;
+}
+
+
+/*.content{
+  max-width: min-content;
+  margin:auto;
+}*/
+
+#logo{
+  display:inline;
+  float:left;
+  padding-right: 4em;
+}
+
+#list1,#list2{
+  display:inline;
+  float:left;
+  font-size:1.25em;
+  position:relative;
+  bottom:2em;
+}
+
+#list1{
+  padding-right:3em;
+}
+
+#footer a:link,a:visited{
+  color:rgb(138, 136, 136);
+}
+
+#footer a:hover
+{
+  color:rgb(71,71,71);
+}
+
+#logo p{
+  font-size: 1em;
+}
+
+#social{
+  float:right;
+  position:relative;
+  bottom:2em;
+}
+
+#social img{
+  filter:brightness(0%);
+}
+
+#social img:hover{
+  filter:brightness(100%);
+}
+
+
+#youtube{
+  position:relative;
+  top:0.7em;
+}
+
+#insta,#linkedin{
+  position:relative;
+  bottom:0.25em;
+}
+
+/*styles for footer ends*/
